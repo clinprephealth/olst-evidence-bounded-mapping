@@ -1,0 +1,12 @@
+{
+  "title": "Evidence Availability Is Not Evidence Entitlement: Replayable, Evidence-Bounded Mapping of Multimodal Biomechanical Data to Clinical Assessment Criteria",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "Methods artifact: content-addressed, evidence-bounded mapping of the public PhysioNet OLST corpus onto Morse Fall Scale and Berg Balance Scale criteria. Nothing here predicts falls or is intended for clinical use.",
+  "creators": [
+    {"name": "Ryder, Michael P.", "affiliation": "Independent researcher"}
+  ],
+  "keywords": ["clinical assessment", "reproducibility", "OLST", "evidence bounded computing"],
+  "license": "cc-by-4.0",
+  "access_right": "open"
+}

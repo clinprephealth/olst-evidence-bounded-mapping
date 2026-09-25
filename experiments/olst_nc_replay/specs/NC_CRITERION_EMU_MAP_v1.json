@@ -1,0 +1,63 @@
+{
+  "spec_version": "v1",
+  "framework": "Morse Fall Scale",
+  "framework_reference": "Morse JM, Morse RM, Tylko SJ. Development of a scale to identify the fall-prone patient. Can J Aging. 1989;8(4):366-377.",
+  "mapping_rule_version": "v1",
+  "criteria": {
+    "history_of_falling": {
+      "label": "History of falling",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Requires self-report or medical-record evidence external to OLST biomechanics.",
+      "mapping_rule_version": "v1"
+    },
+    "secondary_diagnosis": {
+      "label": "Secondary diagnosis",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Requires clinical record evidence external to OLST biomechanics.",
+      "mapping_rule_version": "v1"
+    },
+    "ambulatory_aids": {
+      "label": "Ambulatory aids",
+      "required_emus": ["gait_temporal_control"],
+      "derivability": "partial",
+      "partial_reason": "Gait pattern from MoCap event labels is a proxy for aid use, not definitive — radar/MoCap cannot distinguish a cane from a walker, and absence of an aid in capture does not imply absence in daily life.",
+      "mapping_rule_version": "v1"
+    },
+    "iv_therapy": {
+      "label": "IV therapy / heparin lock",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Requires clinical record evidence external to OLST biomechanics.",
+      "mapping_rule_version": "v1"
+    },
+    "gait_type": {
+      "label": "Gait type (normal / weak / impaired)",
+      "required_emus": ["gait_temporal_control", "postural_stability_index"],
+      "derivability": "derivable",
+      "derivation_summary": "Stability duration (gait_temporal_control.stability_duration_ms) combined with CoP sway (postural_stability_index.sway_area_mm2 and mean_cop_displacement_mm) maps deterministically to Morse gait categories per the rule version's threshold spec.",
+      "thresholds": {
+        "normal": "stability_duration_ms >= 10000 AND sway_area_mm2 < threshold_normal",
+        "weak": "stability_duration_ms >= 5000 AND stability_duration_ms < 10000",
+        "impaired": "stability_duration_ms < 5000 OR sway_area_mm2 >= threshold_impaired"
+      },
+      "thresholds_note": "Concrete numeric thresholds (threshold_normal, threshold_impaired) are pinned in the harness's mapping rule v1 implementation and traced through ReplayReport.criterion_evaluations[].rule_version. The 10s cutoff aligns with the OLST clinical convention; the stratification by age cohort (spec §5) is applied at the report layer, not at criterion evaluation.",
+      "mapping_rule_version": "v1"
+    },
+    "mental_status": {
+      "label": "Mental status (oriented / forgets limitations)",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Requires cognitive assessment evidence external to OLST biomechanics. Inferring from gait variability would collapse the epistemic boundary between measurement and inference; the system explicitly refuses.",
+      "mapping_rule_version": "v1"
+    }
+  },
+  "summary": {
+    "derivable": 1,
+    "partial": 1,
+    "non_evaluable": 4,
+    "total": 6,
+    "note": "4 of 6 Morse criteria are structurally non-evaluable from OLST biomechanics. This is the architectural claim, not a limitation: the system surfaces evidence gaps explicitly rather than imputing values."
+  }
+}

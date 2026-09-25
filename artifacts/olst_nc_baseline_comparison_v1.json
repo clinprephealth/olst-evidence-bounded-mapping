@@ -1,0 +1,253 @@
+{
+  "comparison_note": "Naive heuristic = stability_duration_ms threshold against 10s/5s cuts; imputes 0 for missing stability fields, has no traceability, no non-evaluable markers. Governed harness adds EMU layer, gap visibility, and traceability \u2014 same gait_type on clean cases where data is unambiguous; divergent on missing/adversarial fixtures by construction.",
+  "headline": {
+    "agreement_on_clean": "5/5",
+    "agreement_on_noisy": "3/3",
+    "divergence_on_missing_data": "2/2",
+    "governed_traceability_pointers_total": 49,
+    "naive_traceability_pointers_total": 0
+  },
+  "rows": [
+    {
+      "agreement": "agree",
+      "category": "adversarial",
+      "fixture": "adversarial_conflicting_events.json",
+      "governed_gait_type": "impaired",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "impaired",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "agree",
+      "category": "adversarial",
+      "fixture": "adversarial_stale_metadata.json",
+      "governed_gait_type": "normal",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "normal",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "agree",
+      "category": "axis_flip",
+      "fixture": "axis_flip_01.json",
+      "governed_gait_type": "normal",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "normal",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "agree",
+      "category": "axis_flip",
+      "fixture": "axis_flip_02.json",
+      "governed_gait_type": "normal",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "normal",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "agree",
+      "category": "borderline",
+      "fixture": "borderline_just_over.json",
+      "governed_gait_type": "normal",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "normal",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "agree",
+      "category": "borderline",
+      "fixture": "borderline_just_under.json",
+      "governed_gait_type": "weak",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "weak",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "agree",
+      "category": "clean",
+      "fixture": "clean_older_01.json",
+      "governed_gait_type": "normal",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "normal",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "agree",
+      "category": "clean",
+      "fixture": "clean_older_02_20s.json",
+      "governed_gait_type": "normal",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "normal",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "agree",
+      "category": "clean",
+      "fixture": "clean_older_03.json",
+      "governed_gait_type": "normal",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "normal",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "agree",
+      "category": "clean",
+      "fixture": "clean_young_01.json",
+      "governed_gait_type": "normal",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "normal",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "agree",
+      "category": "clean",
+      "fixture": "clean_young_02.json",
+      "governed_gait_type": "normal",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "normal",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "n/a (governed refuses to process)",
+      "category": "excluded",
+      "fixture": "excluded_capture_negative_control.json",
+      "governed_gait_type": "RAISES_ExcludedCaptureError",
+      "governed_non_evaluable_count": null,
+      "governed_traceability_pointers": 0,
+      "naive_gait_type": null,
+      "naive_traceability": false
+    },
+    {
+      "agreement": "divergent: naive imputes, governed marks non_evaluable",
+      "category": "missing_data",
+      "fixture": "missing_fp_channel.json",
+      "governed_gait_type": "non_evaluable",
+      "governed_non_evaluable_count": 5,
+      "governed_traceability_pointers": 1,
+      "naive_gait_type": "normal",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "divergent: naive imputes, governed marks non_evaluable",
+      "category": "missing_data",
+      "fixture": "missing_mocap_events.json",
+      "governed_gait_type": "non_evaluable",
+      "governed_non_evaluable_count": 6,
+      "governed_traceability_pointers": 0,
+      "naive_gait_type": "impaired",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "agree",
+      "category": "noisy",
+      "fixture": "noisy_01.json",
+      "governed_gait_type": "weak",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "weak",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "agree",
+      "category": "noisy",
+      "fixture": "noisy_02.json",
+      "governed_gait_type": "weak",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "weak",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "agree",
+      "category": "noisy",
+      "fixture": "noisy_03.json",
+      "governed_gait_type": "weak",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "weak",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "agree",
+      "category": "unit_mismatch",
+      "fixture": "unit_mismatch_bw.json",
+      "governed_gait_type": "normal",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "normal",
+      "naive_traceability": false
+    },
+    {
+      "agreement": "divergent: naive=normal governed=impaired",
+      "category": "unit_mismatch",
+      "fixture": "unit_mismatch_n.json",
+      "governed_gait_type": "impaired",
+      "governed_non_evaluable_count": 4,
+      "governed_traceability_pointers": 3,
+      "naive_gait_type": "normal",
+      "naive_traceability": false
+    }
+  ],
+  "spec_version": "v1",
+  "summary_by_category": {
+    "adversarial": {
+      "agree": 2,
+      "divergent": 0,
+      "n/a": 0,
+      "total": 2
+    },
+    "axis_flip": {
+      "agree": 2,
+      "divergent": 0,
+      "n/a": 0,
+      "total": 2
+    },
+    "borderline": {
+      "agree": 2,
+      "divergent": 0,
+      "n/a": 0,
+      "total": 2
+    },
+    "clean": {
+      "agree": 5,
+      "divergent": 0,
+      "n/a": 0,
+      "total": 5
+    },
+    "excluded": {
+      "agree": 0,
+      "divergent": 0,
+      "n/a": 1,
+      "total": 1
+    },
+    "missing_data": {
+      "agree": 0,
+      "divergent": 2,
+      "n/a": 0,
+      "total": 2
+    },
+    "noisy": {
+      "agree": 3,
+      "divergent": 0,
+      "n/a": 0,
+      "total": 3
+    },
+    "unit_mismatch": {
+      "agree": 1,
+      "divergent": 1,
+      "n/a": 0,
+      "total": 2
+    }
+  }
+}

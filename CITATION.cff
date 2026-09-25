@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "Evidence Availability Is Not Evidence Entitlement: Replayable, Evidence-Bounded Mapping of Multimodal Biomechanical Data to Clinical Assessment Criteria"
+message: "If you use this package, please cite the preprint."
+type: article
+authors:
+  - family-names: Ryder
+    given-names: Michael P.
+    affiliation: Independent researcher
+    email: michaelryder.do@gmail.com
+keywords:
+  - clinical assessment
+  - evidence bounded computing
+  - reproducibility
+  - one-legged stand test
+license: CC-BY-4.0
+date-released: "2026-09-25"

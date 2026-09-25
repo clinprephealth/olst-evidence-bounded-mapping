@@ -1,0 +1,73 @@
+# OLST-derived EMU shapes — v1 (draft)
+# Morse / NC mapping consumes these only after canonicalization (O-CI-0).
+# All EMUs: non_authoritative: true, requires_human_ack: true at emit time.
+
+schema_version: olst_emu_schema_v1
+
+types:
+  gait_temporal_control:
+    description: >
+      MoCap / event-derived temporal control for one attempt (not aggregated across attempts).
+      Emitted when at least one of the two event windows is present. Fields marked
+      "optional (v1.3)" appear only when the fixture carries the source window; fixtures
+      without them (all 19 synthetic fixtures) produce a payload byte-identical to pre-v1.3.
+    provenance:
+      source_trial_id: string
+      stability_phase_start_ms: integer        # absent when no stable phase (spec §6.4)
+      stability_phase_end_ms: integer          # absent when no stable phase
+      stance_phase_foot_up_ms: integer         # optional (v1.3), spec §6.6
+      stance_phase_touchdown_ms: integer       # optional (v1.3)
+      observation_ceiling_source: string       # optional (v1.3)
+      event_label_source: string
+      normalization_rule_version: string
+      # Finding 1 — attempt count is performance-dependent; same duration on attempt 1 vs 6
+      # is not interchangeable at interpretation time.
+      attempt_number: integer
+      total_attempts_in_session: integer
+    payload:
+      stability_duration_ms: integer           # t_break - t_stable; absent when no stable phase
+      stance_duration_ms: integer              # optional (v1.3): t_end - t_foot_up. The corrected
+                                               # sustained-stance construct (amendment A1).
+      observation_ceiling_ms: integer | null   # optional (v1.3): acquisition-protocol ceiling
+                                               # (amendment A3); null = unpublished, never inferred
+      protocol_code: string                    # optional (v1.3): movement code, e.g. TRLGL
+      trial_leg: string
+
+  postural_stability_index:
+    description: Force plate CoP variability during stability phase (single attempt unless spec allows span).
+    provenance:
+      source_trial_id: string
+      stability_phase_start_ms: integer
+      stability_phase_end_ms: integer
+      normalization_rule_version: string
+      attempt_number: integer
+      total_attempts_in_session: integer
+    payload:
+      mean_cop_displacement_mm: number
+      sway_area_mm2: number
+      stance_duration_ms: integer   # MISNOMER, retained for v1 output-hash stability: this is the
+                                    # stable-window length (t_stable -> t_break), equal to
+                                    # gait_temporal_control.stability_duration_ms. No v2 rule reads
+                                    # it. The stance construct is gait_temporal_control.stance_duration_ms.
+
+  weight_distribution_asymmetry:
+    description: Left/right distribution during bilateral phases where applicable.
+    provenance:
+      source_trial_id: string
+      normalization_rule_version: string
+      attempt_number: integer
+      total_attempts_in_session: integer
+    payload:
+      left_pct: number
+      right_pct: number
+      asymmetry_index: number
+
+  balance_control_quality:
+    description: Composite derived from stability duration + CoP sway (rule-versioned).
+    provenance:
+      source_trial_id: string
+      derivation_rule_version: string
+      attempt_number: integer
+      total_attempts_in_session: integer
+    payload:
+      composite_score: number

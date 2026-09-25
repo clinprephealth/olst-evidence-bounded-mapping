@@ -1,0 +1,140 @@
+{
+  "spec_version": "berg_v1",
+  "framework": "Berg Balance Scale",
+  "framework_reference": "Berg K, Wood-Dauphinee SL, Williams JI, Gayton D. Measuring balance in the elderly: preliminary development of an instrument. Physiother Can. 1989;41(6):304-311. Berg KO, Wood-Dauphinee SL, Williams JI, Maki B. Measuring balance in the elderly: validation of an instrument. Can J Public Health. 1992;83 Suppl 2:S7-11.",
+  "rubric_source": "Academy of Neurologic Physical Therapy, Core Measure: Berg Balance Scale (BBS), reprinted with permission from the author Katherine Berg from J Neurol Phys Ther 2018;42(2):174-220. Item text verified against this document on 2026-09-10 (amendment A15).",
+  "mapping_rule_version": "berg_v1",
+  "specified_on": "2026-09-10",
+  "specified_before": "any Berg execution on real data",
+  "amendment_reference": "protocol/AMENDMENT_2026-09-09_D1_RESOLUTION.md (A15)",
+  "filename_note": "Named NC_CRITERION_EMU_MAP_berg_v1.json because the harness resolves maps as NC_CRITERION_EMU_MAP_<mapping_spec_version>.json; 'NC' is the project's criterion-map namespace, not a Morse reference.",
+  "criteria": {
+    "berg_01_sitting_to_standing": {
+      "label": "1. Sitting to standing",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Sit-to-stand transfer is not elicited by the OLST protocol; no EMU observes it.",
+      "mapping_rule_version": "berg_v1"
+    },
+    "berg_02_standing_unsupported": {
+      "label": "2. Standing unsupported",
+      "required_emus": ["gait_temporal_control"],
+      "derivability": "partial",
+      "partial_reason": "Rubric: bipedal quiet standing for 2 minutes (4: able to stand safely for 2 minutes). OLST is single-leg stance of at most ~20 s under a different instruction; single-leg stance duration is related balance evidence, not the bipedal 2-minute observation the item scores.",
+      "mapping_rule_version": "berg_v1"
+    },
+    "berg_03_sitting_unsupported": {
+      "label": "3. Sitting with back unsupported",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Seated balance is not elicited by the OLST protocol; no EMU observes it.",
+      "mapping_rule_version": "berg_v1"
+    },
+    "berg_04_standing_to_sitting": {
+      "label": "4. Standing to sitting",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Stand-to-sit transfer is not elicited by the OLST protocol; no EMU observes it.",
+      "mapping_rule_version": "berg_v1"
+    },
+    "berg_05_transfers": {
+      "label": "5. Transfers",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Chair-to-chair transfer is not elicited by the OLST protocol; no EMU observes it.",
+      "mapping_rule_version": "berg_v1"
+    },
+    "berg_06_standing_eyes_closed": {
+      "label": "6. Standing unsupported with eyes closed",
+      "required_emus": ["gait_temporal_control"],
+      "derivability": "partial",
+      "partial_reason": "Rubric: bipedal standing with eyes closed for 10 seconds. OLST attempts are eyes-open single-leg stance; the visual condition and the base of support both differ. Related balance evidence only.",
+      "mapping_rule_version": "berg_v1"
+    },
+    "berg_07_standing_feet_together": {
+      "label": "7. Standing unsupported with feet together",
+      "required_emus": ["gait_temporal_control"],
+      "derivability": "partial",
+      "partial_reason": "Rubric: feet together, hold 1 minute (4: independently and stand 1 minute safely). OLST is single-leg stance; base of support and duration differ. Related balance evidence only.",
+      "mapping_rule_version": "berg_v1"
+    },
+    "berg_08_reaching_forward": {
+      "label": "8. Reaching forward with outstretched arm while standing",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Forward reach distance is not elicited by the OLST protocol; no EMU observes it.",
+      "mapping_rule_version": "berg_v1"
+    },
+    "berg_09_pick_up_object": {
+      "label": "9. Pick up object from the floor from a standing position",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Bending to the floor is not elicited by the OLST protocol; no EMU observes it.",
+      "mapping_rule_version": "berg_v1"
+    },
+    "berg_10_turning_to_look_behind": {
+      "label": "10. Turning to look behind over left and right shoulders",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Trunk rotation with weight shift is not elicited by the OLST protocol; no EMU observes it.",
+      "mapping_rule_version": "berg_v1"
+    },
+    "berg_11_turn_360": {
+      "label": "11. Turn 360 degrees",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Turning is not elicited by the OLST protocol; no EMU observes it.",
+      "mapping_rule_version": "berg_v1"
+    },
+    "berg_12_alternate_foot_on_step": {
+      "label": "12. Placing alternate foot on step or stool while standing unsupported",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Stepping onto a stool is not elicited by the OLST protocol; no EMU observes it.",
+      "mapping_rule_version": "berg_v1"
+    },
+    "berg_13_standing_one_foot_in_front": {
+      "label": "13. Standing unsupported one foot in front",
+      "required_emus": ["gait_temporal_control"],
+      "derivability": "partial",
+      "partial_reason": "Rubric: tandem stance, hold 30 seconds (4: place foot tandem independently and hold 30 seconds). OLST is single-leg stance; the base of support and the 30 s hold differ. Related balance evidence only.",
+      "mapping_rule_version": "berg_v1"
+    },
+    "berg_14_standing_on_one_leg": {
+      "label": "14. Standing on one leg",
+      "required_emus": ["gait_temporal_control"],
+      "derivability": "derivable",
+      "derivation_summary": "Berg item 14 is single-leg stance held as long as possible without holding on; the OLST attempt instantiates that construct, and the rubric is a duration rubric on the stance interval. gait_temporal_control.stance_duration_ms (foot-lift to foot-touchdown, spec §6.6) maps to the rubric levels below, subject to protocol censoring. CoP sway is not part of the rubric and is not required.",
+      "rubric_verbatim": {
+        "instructions": "Stand on one leg as long as you can without holding on with your hands. Do not let your lifted leg touch your standing leg.",
+        "4": "able to lift leg independently and hold >10 seconds",
+        "3": "able to lift leg independently and hold 5-10 seconds",
+        "2": "able to lift leg independently and hold >=3 seconds",
+        "1": "tries to lift leg unable to hold 3 seconds but remains standing independently",
+        "0": "unable to try or needs assist to prevent fall"
+      },
+      "rule": {
+        "type": "ordinal_duration_thresholds",
+        "duration_field": "stance_duration_ms",
+        "levels": [
+          {"label": "score_4", "min_ms": 10001, "rubric": ">10 seconds; integer-millisecond durations, so strictly greater than 10000 ms"},
+          {"label": "score_3", "min_ms": 5000, "rubric": "5-10 seconds"},
+          {"label": "score_2", "min_ms": 3000, "rubric": ">=3 seconds"}
+        ],
+        "floor_label": "score_1_or_0_unresolved",
+        "floor_note": "Below 3 s the rubric separates 1 (remains standing independently) from 0 (unable to try or needs assist). Every OLST attempt has a foot-lift event, so 'unable to try' does not apply, but the release annotates no assistance or loss of balance, so 1 and 0 cannot be separated from the evidence and the map refuses to choose.",
+        "protocol_censoring": true,
+        "semantics": "A level is emitted only when the next rubric boundary above the measured duration was observable under the acquisition ceiling, so that the participant demonstrably failed to cross an observable boundary (or attained score_4). Under the sourced 4000 ms MNTR* ceiling (spec v1.4) the 3000 ms boundary is observable and the 5000 / 10001 ms boundaries are not: an MNTR* attempt below 3 s is scored at the floor; one at or above 3 s is protocol_censored (could be 2, 3, or 4). Under the 20000 ms TRLG* ceiling all levels are observable."
+      },
+      "mapping_rule_version": "berg_v1"
+    }
+  },
+  "summary": {
+    "derivable": 1,
+    "partial": 4,
+    "non_evaluable": 9,
+    "total": 14,
+    "note": "The same EMU that is only partial evidence for the Morse gait item (an ambulation observation) is derivable for Berg item 14 (single-leg stance is the item's construct). The measurement did not change; the question did. Protocol censoring still bounds what the MNTR* short trials can establish: no upper Berg category is reachable under a 4 s cue."
+  },
+  "contribution_5_note": "The plan's success condition for the second framework was zero harness change. Expressing item 14 required a new generic rule type (ordinal_duration_thresholds) in the harness, because the existing type carried three fixed Morse labels at two boundaries. The attempt is reported and the 'no harness change' claim is withdrawn as promised (amendment A15); the spec, store, fixture set, and EMU derivation are unchanged."
+}

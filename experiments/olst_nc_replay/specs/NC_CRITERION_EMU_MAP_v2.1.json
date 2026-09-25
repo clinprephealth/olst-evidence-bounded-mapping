@@ -1,0 +1,111 @@
+{
+  "spec_version": "v2.1",
+  "framework": "Morse Fall Scale",
+  "framework_reference": "Morse JM, Morse RM, Tylko SJ. Development of a scale to identify the fall-prone patient. Can J Aging. 1989;8(4):366-377.",
+  "mapping_rule_version": "v2.1",
+  "specified_on": "2026-09-09",
+  "specified_before": "any v2 or v2.1 execution on real data; after the v1 full-corpus run (amendment A11); before the Step 2 runs",
+  "amendment_reference": "protocol/AMENDMENT_2026-09-09_D1_RESOLUTION.md (A12)",
+  "criteria": {
+    "history_of_falling": {
+      "label": "History of falling",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Requires self-report or medical-record evidence external to OLST biomechanics.",
+      "mapping_rule_version": "v2.1"
+    },
+    "secondary_diagnosis": {
+      "label": "Secondary diagnosis",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Requires clinical record evidence external to OLST biomechanics.",
+      "mapping_rule_version": "v2.1"
+    },
+    "ambulatory_aids": {
+      "label": "Ambulatory aids",
+      "required_emus": [
+        "gait_temporal_control"
+      ],
+      "derivability": "partial",
+      "partial_reason": "Gait pattern from MoCap event labels is a proxy for aid use, not definitive — radar/MoCap cannot distinguish a cane from a walker, and absence of an aid in capture does not imply absence in daily life.",
+      "mapping_rule_version": "v2.1"
+    },
+    "iv_therapy": {
+      "label": "IV therapy / heparin lock",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Requires clinical record evidence external to OLST biomechanics.",
+      "mapping_rule_version": "v2.1"
+    },
+    "gait_type": {
+      "label": "Gait type (normal / weak / impaired)",
+      "required_emus": [
+        "gait_temporal_control",
+        "postural_stability_index"
+      ],
+      "derivability": "partial",
+      "partial_reason": "The Morse gait item is an observation of ambulation (posture, step length, use of furniture for support). Single-leg stance duration and CoP sway are related balance evidence, not that observation; the mapping is a proxy and is declared as such.",
+      "derivation_summary": "Stance duration (gait_temporal_control.stance_duration_ms, foot-lift to foot-touchdown) maps to a proxy category under the rule block below, subject to protocol censoring. CoP sway over the stable sub-window (postural_stability_index) is required and linked as evidence but does not determine the label.",
+      "rule": {
+        "type": "duration_sway_thresholds",
+        "duration_field": "stance_duration_ms",
+        "thresholds": {
+          "duration_normal_min_ms": 10000,
+          "duration_weak_min_ms": 5000,
+          "sway_area_normal_max_mm2": 250.0,
+          "sway_area_impaired_min_mm2": 600.0
+        },
+        "protocol_censoring": true,
+        "semantics": {
+          "normal": "stance_duration_ms >= 10000 (observable under the protocol ceiling)",
+          "weak": "5000 <= stance_duration_ms < 10000 (observable under the protocol ceiling)",
+          "impaired": "stance_duration_ms < 5000 (observable under the protocol ceiling)",
+          "protocol_censored": "acquisition_protocol.observation_ceiling_ms is null or below a duration threshold the label would need; the measured stance_duration_ms is reported in detail and no duration label is asserted.",
+          "sway_area_mm2": "reported in detail with its evidence pointer; takes no part in label determination (sway_gating = false)."
+        },
+        "sway_gating": false
+      },
+      "thresholds_note": "Duration thresholds identical to v1 and v2 (D4, no tuning). Sway bounds retained as historical record only; see changes_from_v2.",
+      "reference_norms": {
+        "note": "Age-stratified single-leg-stance norms are reference metadata only; no rule in this map reads them. Numeric values are transcribed in the manuscript from the sources, not embedded here, so that a transcription correction does not re-version the map.",
+        "sources": [
+          "Springer BA, Marin R, Cyhan T, Roberts H, Gill NW. Normative values for the unipedal stance test with eyes open and closed. J Geriatr Phys Ther. 2007;30(1):8-15.",
+          "Bohannon RW. Single limb stance times: a descriptive meta-analysis of data from individuals at least 60 years of age. Top Geriatr Rehabil. 2006;22(1):70-77."
+        ]
+      },
+      "mapping_rule_version": "v2.1"
+    },
+    "mental_status": {
+      "label": "Mental status (oriented / forgets limitations)",
+      "required_emus": [],
+      "derivability": "non_evaluable",
+      "non_evaluable_reason": "Requires cognitive assessment evidence external to OLST biomechanics. Inferring from gait variability would collapse the epistemic boundary between measurement and inference; the system explicitly refuses.",
+      "mapping_rule_version": "v2.1"
+    }
+  },
+  "aggregation": {
+    "criterion_id": "gait_type",
+    "rule": "best_of_attempts",
+    "emu_type": "gait_temporal_control",
+    "payload_field": "stance_duration_ms",
+    "require_every_attempt": true,
+    "require_non_overlapping_attempt_windows": true,
+    "protocol_censoring": true,
+    "note": "OLST clinical convention records the best of several attempts. The aggregate is computed by olst_capture_aggregate.py from per-attempt runs, never by merging fixtures. Sway is per-attempt and does not enter the aggregate label; per-attempt evaluations are listed beside the aggregate. Non-evaluable when any attempt lacks the field (reason names the attempt) or any two attempt windows overlap (release 1.0: 47_TRLGL_V4)."
+  },
+  "summary": {
+    "derivable": 0,
+    "partial": 2,
+    "non_evaluable": 4,
+    "total": 6,
+    "note": "4 of 6 Morse criteria are structurally non-evaluable from OLST biomechanics; the remaining 2 are partial. v2.1 changes what one measurement is permitted to decide, not whether it exists: sway remains measured, provenance-linked evidence and ceases to be a category gate."
+  },
+  "derived_from": "NC_CRITERION_EMU_MAP_v2.json (criterion_map_id d4ac623a2590f51bb8351bced784f58e88e3c4f75683482ca0cc1d2d2529d3c4)",
+  "changes_from_v2": [
+    "A12: sway_area_mm2 is removed from label determination (rule.sway_gating = false). The v1 bounds 250 / 600 mm^2 originated in the synthetic fixture regime (140-250 mm^2 clean, 480-540 mm^2 noisy) and were never validated against this dataset's single-leg force-plate acquisition; on the full v1 corpus they forced 1082/1082 evaluable attempts to 'impaired' while the duration-only comparator produced 66 normal and 54 weak. They are not entitled to act as category gates.",
+    "No replacement sway thresholds are introduced. The 250 / 600 values remain in the rule block as historical record; with sway_gating=false the harness ignores them.",
+    "Sway is retained in full as evidence: postural_stability_index stays in required_emus (evidence pointer retained; absent CoP EMU still yields non-evaluable), sway_area_mm2 is still reported in the evaluation detail, and its distribution is reported in the paper.",
+    "Unchanged from v2: stance_duration_ms construct (D1), best_of_attempts aggregation with overlap check (D2/D2a), gait partial (D3), 10000 / 5000 ms duration thresholds (D4), protocol censoring (D4a).",
+    "The evaluation remains a proxy category under the criterion map, not a Morse gait classification."
+  ]
+}

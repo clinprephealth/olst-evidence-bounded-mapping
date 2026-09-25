@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+  <rect width="760" height="420" fill="#fcfcfb"/>
+  <text x="16" y="22" font-size="12" fill="#0b0b0b" font-weight="600">Figure 1. Evidence-to-criterion architecture with the three compatibility boundaries and content-addressed identity</text>
+
+  <!-- pipeline boxes -->
+  <g stroke="#c3c2b7" stroke-width="1" fill="#ffffff">
+    <rect x="16" y="60" width="120" height="70" rx="4"/>
+    <rect x="168" y="60" width="130" height="70" rx="4"/>
+    <rect x="330" y="60" width="130" height="70" rx="4"/>
+    <rect x="492" y="60" width="130" height="70" rx="4"/>
+    <rect x="654" y="60" width="90" height="70" rx="4"/>
+  </g>
+  <g fill="#0b0b0b" font-weight="600">
+    <text x="76" y="80" text-anchor="middle">Source files</text>
+    <text x="233" y="80" text-anchor="middle">Canonical fixture</text>
+    <text x="395" y="80" text-anchor="middle">Evidence units</text>
+    <text x="557" y="80" text-anchor="middle">Criterion map</text>
+    <text x="699" y="80" text-anchor="middle">Evaluation</text>
+  </g>
+  <g fill="#52514e" font-size="9.5">
+    <text x="76" y="96" text-anchor="middle">PhysioNet CSVs</text>
+    <text x="76" y="109" text-anchor="middle">+ SHA256SUMS digests</text>
+    <text x="233" y="96" text-anchor="middle">per attempt; stance and</text>
+    <text x="233" y="109" text-anchor="middle">stable windows; ceiling</text>
+    <text x="233" y="122" text-anchor="middle">with named source</text>
+    <text x="395" y="96" text-anchor="middle">gait_temporal_control,</text>
+    <text x="395" y="109" text-anchor="middle">postural_stability_index …</text>
+    <text x="395" y="122" text-anchor="middle">omitted, never imputed</text>
+    <text x="557" y="96" text-anchor="middle">required EMUs, derivability,</text>
+    <text x="557" y="109" text-anchor="middle">rule, reasons, aggregation</text>
+    <text x="557" y="122" text-anchor="middle">(v1 · v2 · v2.1 · berg_v1)</text>
+    <text x="699" y="96" text-anchor="middle">label, or censored,</text>
+    <text x="699" y="109" text-anchor="middle">or non-evaluable</text>
+    <text x="699" y="122" text-anchor="middle">with reason + pointers</text>
+  </g>
+  <g stroke="#52514e" stroke-width="1.2" marker-end="url(#arr)" fill="none">
+    <path d="M136 95 L166 95"/><path d="M298 95 L328 95"/><path d="M460 95 L490 95"/><path d="M622 95 L652 95"/>
+  </g>
+
+  <!-- boundaries -->
+  <g font-size="10">
+    <rect x="168" y="150" width="130" height="58" rx="4" fill="#f9f9f7" stroke="#e1e0d9"/>
+    <text x="233" y="168" text-anchor="middle" fill="#0b0b0b" font-weight="600">Protocol compatibility</text>
+    <text x="233" y="183" text-anchor="middle" fill="#52514e">did the acquisition permit the</text>
+    <text x="233" y="196" text-anchor="middle" fill="#52514e">threshold to be observed?</text>
+
+    <rect x="330" y="150" width="130" height="58" rx="4" fill="#f9f9f7" stroke="#e1e0d9"/>
+    <text x="395" y="168" text-anchor="middle" fill="#0b0b0b" font-weight="600">Modality compatibility</text>
+    <text x="395" y="183" text-anchor="middle" fill="#52514e">can the sensor observe the</text>
+    <text x="395" y="196" text-anchor="middle" fill="#52514e">required evidence at all?</text>
+
+    <rect x="492" y="150" width="130" height="58" rx="4" fill="#f9f9f7" stroke="#e1e0d9"/>
+    <text x="557" y="168" text-anchor="middle" fill="#0b0b0b" font-weight="600">Framework compatibility</text>
+    <text x="557" y="183" text-anchor="middle" fill="#52514e">is this the construct the</text>
+    <text x="557" y="196" text-anchor="middle" fill="#52514e">criterion asks about?</text>
+  </g>
+  <g stroke="#c3c2b7" stroke-width="1" stroke-dasharray="3 3" fill="none">
+    <path d="M233 130 L233 150"/><path d="M395 130 L395 150"/><path d="M557 130 L557 150"/>
+  </g>
+
+  <!-- authority band -->
+  <rect x="168" y="222" width="454" height="34" rx="4" fill="#ffffff" stroke="#c3c2b7"/>
+  <text x="395" y="237" text-anchor="middle" fill="#0b0b0b" font-weight="600" font-size="10">Evidentiary authority (orthogonal): a measurement can be retained as linked evidence</text>
+  <text x="395" y="250" text-anchor="middle" fill="#52514e" font-size="9.5">without being entitled to determine the category (v2 → v2.1: sway reported, not gating)</text>
+
+  <!-- identity -->
+  <rect x="16" y="280" width="728" height="118" rx="4" fill="#ffffff" stroke="#c3c2b7"/>
+  <text x="28" y="298" fill="#0b0b0b" font-weight="600">Content-addressed identity</text>
+  <g font-family="Menlo, Consolas, monospace" font-size="9.5" fill="#52514e">
+    <text x="28" y="318">fixture_id   = SHA-256(fixture bytes)      spec_id = SHA-256(canonicalization spec)      criterion_map_id = SHA-256(map JSON)      harness_version = SHA-256(harness source)</text>
+    <text x="28" y="336">run_id       = SHA-256(fixture_id, dataset_version, mapping_spec_version, spec_id, criterion_map_id, harness_version)</text>
+    <text x="28" y="354">output_hash  = SHA-256(canonical{emu_outputs, criterion_evaluations, non_evaluable_criteria, traceability, mapping_spec_version, dataset_version})</text>
+  </g>
+  <text x="28" y="378" fill="#52514e" font-size="9.5">Comparing digests names the cause of any divergence: map changed (v1 → v2 → v2.1), acquisition metadata changed (spec v1.3 → v1.4: new fixture_id, same decision),</text>
+  <text x="28" y="391" fill="#52514e" font-size="9.5">or harness changed (Berg needed a rule type: harness_version moved, spec and store did not). Store: ingest → recall → verify_replay, bit-for-bit.</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/>
+    </marker>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#e1e0d9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#898781" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  <rect width="760" height="430" fill="#fcfcfb"/>
+  <text x="16" y="22" font-size="12" fill="#0b0b0b" font-weight="600">Figure 4. Same evidence, different entitlement: one stance measurement under two clinical frameworks (1233 attempts, spec v1.4)</text>
+
+  <!-- shared evidence -->
+  <rect x="290" y="48" width="180" height="62" rx="4" fill="#ffffff" stroke="#c3c2b7"/>
+  <text x="380" y="68" text-anchor="middle" fill="#0b0b0b" font-weight="600">gait_temporal_control</text>
+  <text x="380" y="83" text-anchor="middle" fill="#52514e" font-size="9.5">stance_duration_ms (t_foot_up → t_end)</text>
+  <text x="380" y="96" text-anchor="middle" fill="#52514e" font-size="9.5">+ observation_ceiling_ms, protocol_code</text>
+  <text x="380" y="126" text-anchor="middle" fill="#52514e" font-size="9.5">present on all 1233 attempts</text>
+
+  <g stroke="#52514e" stroke-width="1.2" marker-end="url(#arr)" fill="none">
+    <path d="M330 110 C 300 150, 230 150, 200 172"/>
+    <path d="M430 110 C 460 150, 530 150, 560 172"/>
+  </g>
+
+  <!-- Morse column -->
+  <rect x="40" y="176" width="320" height="230" rx="4" fill="#ffffff" stroke="#c3c2b7"/>
+  <text x="200" y="196" text-anchor="middle" fill="#0b0b0b" font-weight="600">Morse Fall Scale · gait item (map v2.1)</text>
+  <text x="200" y="212" text-anchor="middle" fill="#52514e" font-size="9.5">derivability: <tspan font-weight="600" fill="#0b0b0b">partial</tspan> — the item is an ambulation observation</text>
+  <text x="200" y="226" text-anchor="middle" fill="#52514e" font-size="9.5">required evidence: stance interval <tspan font-weight="600">and</tspan> CoP sway (linked, not gating)</text>
+  <text x="56" y="252" fill="#0b0b0b" font-weight="600" font-size="10">Outcome by protocol</text>
+  <g font-size="9.5" fill="#52514e">
+    <text x="56" y="270">MNTR (4 s cue), 776 attempts</text>
+    <text x="56" y="298">TRLG (20 s trial), 457 attempts</text>
+  </g>
+  <!-- MNTR bar morse -->
+  <rect x="56" y="274" width="240" height="12" fill="url(#hatch)"/>
+  <rect x="296" y="274" width="48" height="12" fill="#e1e0d9"/>
+  <text x="176" y="284" text-anchor="middle" font-size="8.5" fill="#0b0b0b">protocol censored 723</text>
+  <text x="320" y="284" text-anchor="middle" font-size="8" fill="#0b0b0b">NE 53</text>
+  <!-- TRLG bar morse: normal 73, weak 57, impaired 229, NE 98 of 457 -> width 288 -->
+  <rect x="56" y="302" width="46" height="12" fill="#1c5cab"/>
+  <rect x="102" y="302" width="36" height="12" fill="#3987e5"/>
+  <rect x="138" y="302" width="144" height="12" fill="#86b6ef"/>
+  <rect x="282" y="302" width="62" height="12" fill="#e1e0d9"/>
+  <text x="79" y="312" text-anchor="middle" font-size="8" fill="#ffffff">73</text>
+  <text x="120" y="312" text-anchor="middle" font-size="8" fill="#ffffff">57</text>
+  <text x="210" y="312" text-anchor="middle" font-size="8.5" fill="#0b0b0b">impaired 229</text>
+  <text x="313" y="312" text-anchor="middle" font-size="8" fill="#0b0b0b">NE 98</text>
+  <text x="56" y="336" fill="#52514e" font-size="9.5">normal · weak · impaired · <tspan fill="#0b0b0b">NE = non-evaluable: no stable phase,</tspan></text>
+  <text x="56" y="349" fill="#0b0b0b" font-size="9.5">so the required sway evidence is absent (151 attempts)</text>
+  <text x="56" y="372" fill="#52514e" font-size="9.5">Label is a proxy category under the map,</text>
+  <text x="56" y="385" fill="#52514e" font-size="9.5">not a Morse gait classification.</text>
+
+  <!-- Berg column -->
+  <rect x="400" y="176" width="320" height="230" rx="4" fill="#ffffff" stroke="#c3c2b7"/>
+  <text x="560" y="196" text-anchor="middle" fill="#0b0b0b" font-weight="600">Berg Balance Scale · item 14 (map berg_v1)</text>
+  <text x="560" y="212" text-anchor="middle" fill="#52514e" font-size="9.5">derivability: <tspan font-weight="600" fill="#0b0b0b">derivable</tspan> — the item is single-leg stance</text>
+  <text x="560" y="226" text-anchor="middle" fill="#52514e" font-size="9.5">required evidence: stance interval only (rubric is a duration)</text>
+  <text x="416" y="252" fill="#0b0b0b" font-weight="600" font-size="10">Outcome by protocol</text>
+  <g font-size="9.5" fill="#52514e">
+    <text x="416" y="270">MNTR (4 s cue), 776 attempts</text>
+    <text x="416" y="298">TRLG (20 s trial), 457 attempts</text>
+  </g>
+  <!-- MNTR bar berg: censored 413, floor 363 of 776 -> 288 px -->
+  <rect x="416" y="274" width="153" height="12" fill="url(#hatch)"/>
+  <rect x="569" y="274" width="135" height="12" fill="#b7d3f6"/>
+  <text x="492" y="284" text-anchor="middle" font-size="8.5" fill="#0b0b0b">censored 413 (≥3 s: 2, 3 or 4)</text>
+  <text x="636" y="284" text-anchor="middle" font-size="8.5" fill="#0b0b0b">&lt;3 s: 1-or-0 363</text>
+  <!-- TRLG bar berg: 4:73, 3:58, 2:59, floor 267 of 457 -->
+  <rect x="416" y="302" width="46" height="12" fill="#1c5cab"/>
+  <rect x="462" y="302" width="37" height="12" fill="#3987e5"/>
+  <rect x="499" y="302" width="37" height="12" fill="#86b6ef"/>
+  <rect x="536" y="302" width="168" height="12" fill="#b7d3f6"/>
+  <text x="439" y="312" text-anchor="middle" font-size="8" fill="#ffffff">73</text>
+  <text x="480" y="312" text-anchor="middle" font-size="8" fill="#ffffff">58</text>
+  <text x="517" y="312" text-anchor="middle" font-size="8" fill="#0b0b0b">59</text>
+  <text x="620" y="312" text-anchor="middle" font-size="8.5" fill="#0b0b0b">1-or-0 unresolved 267</text>
+  <text x="416" y="336" fill="#52514e" font-size="9.5">score 4 · 3 · 2 · floor (1 vs 0 not separable: assistance is not annotated)</text>
+  <text x="416" y="349" fill="#0b0b0b" font-size="9.5">All 151 no-stable-phase attempts are scored here (149 floor, 1 score 2, 1 score 3).</text>
+  <text x="416" y="372" fill="#52514e" font-size="9.5">Upper categories unreachable under the 4 s cue; the 3 s boundary is.</text>
+  <text x="416" y="385" fill="#52514e" font-size="9.5">Needed a generic ordinal rule type in the harness (+86 / −7 lines).</text>
+
+  <text x="380" y="422" text-anchor="middle" fill="#52514e" font-size="9.5">On TRLG attempts the two maps agree level for level where both label (73 = score 4, 57 = score 3); the difference is standing, not arithmetic.</text>
+</svg>

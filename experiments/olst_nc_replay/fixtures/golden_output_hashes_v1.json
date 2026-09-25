@@ -1,0 +1,97 @@
+{
+  "adversarial_conflicting_events.json": {
+    "expects_exception": null,
+    "fixture_id": "472af02f2975fca2c645329bf1a756923d07b25acd3b3f948bd4e8aad60bff94",
+    "output_hash": "c9ded3fdf45af0b3dd0f89c6a9bdfb04147e10fee0ace38e55b636dc9cd57fee"
+  },
+  "adversarial_stale_metadata.json": {
+    "expects_exception": null,
+    "fixture_id": "b2f5bbe123434df3f7c9f3f74b9b0e685b37d42c7eebbeb5c63647dca3735316",
+    "output_hash": "a6455fd4ecd642984490dbaf4b80d2238d55474afdbae730d01a0f840effe145"
+  },
+  "axis_flip_01.json": {
+    "expects_exception": null,
+    "fixture_id": "c89e6492854fbe4f266fc3ca06ffcb23eeaa5675b9f23ff328481518bf4f3f0a",
+    "output_hash": "46151ef24acd2b29d61114a065a1523d1032a77084376550227b151ed4d2480e"
+  },
+  "axis_flip_02.json": {
+    "expects_exception": null,
+    "fixture_id": "52e84609ac0fd0f58f47edd2cd27cf21841fd2601f6baada9c918469e44dbeb3",
+    "output_hash": "1772e5fb3a05ed156003fc498fe2c9eb035c40a57a2f59ccb723ffbb7d5f3735"
+  },
+  "borderline_just_over.json": {
+    "expects_exception": null,
+    "fixture_id": "b206ba830892e7009506b117e497e0ed91b0e5905e40419b11c5bf99a04ce2ea",
+    "output_hash": "1d980e2c7c0031086a66173134b0fbb3e1b14f4ebac102e90081c15b9c972aa5"
+  },
+  "borderline_just_under.json": {
+    "expects_exception": null,
+    "fixture_id": "43fb7c107374580d499b6a653337cc7f3e50708d4eb4c9e073b6d768992c7e29",
+    "output_hash": "4ba26c0d2eb2b7e8d03b1baef664a0e231595fa8866a06f2845171f12bd39386"
+  },
+  "clean_older_01.json": {
+    "expects_exception": null,
+    "fixture_id": "1a6f5e7a805963c5058b608b1fe2a4c372ce5a86348917c4d7237b2001deaad0",
+    "output_hash": "8c34cdb2ea4508fd03fcb45d578ff6cdab7b9c183325262545d1a76161a9d334"
+  },
+  "clean_older_02_20s.json": {
+    "expects_exception": null,
+    "fixture_id": "f998c665658fce3cfcb26957b925c9c7ebbf283d3f4e4c373ab5a29b25d22fd3",
+    "output_hash": "5c86f864f7dd493d706a03f20e4ade5316244b71c101ecddbfbd7a4d8cb9d1b2"
+  },
+  "clean_older_03.json": {
+    "expects_exception": null,
+    "fixture_id": "bee3bf5b77a2b2526529b8ef6b1d53580e0613fa82bdff67f6ab1eca033cfade",
+    "output_hash": "3006ea365ce8ea2ca9d627ef3ddb8adee3886502105c9efa117dfb4cd56890c0"
+  },
+  "clean_young_01.json": {
+    "expects_exception": null,
+    "fixture_id": "a74d6032750ad537242b8574fd89fc0a5e34d427b16c1c67933cea30a264174a",
+    "output_hash": "4618a97644df80799f3a087cfa29b68af3327f04a92023d0ba19cc672e538304"
+  },
+  "clean_young_02.json": {
+    "expects_exception": null,
+    "fixture_id": "c8b6aadaad3785288bf3ed0b158f679c9c9e4e0873608d9dc70aeebe9c49d086",
+    "output_hash": "d098dcdc2175f91bf822e103f5c446a77cb684ae366813cc0641db5d6d22b73a"
+  },
+  "excluded_capture_negative_control.json": {
+    "expects_exception": "ExcludedCaptureError",
+    "fixture_id": "3c3805baf199b46c517ffea3dc21ff155cec4ff359e8a7ce8b53a88f20beba6b",
+    "output_hash": null
+  },
+  "missing_fp_channel.json": {
+    "expects_exception": null,
+    "fixture_id": "0709f88ed3a6b4a87413de310eef23ad0215c1aa5f50073c85368a69d7fad388",
+    "output_hash": "75d1d1e97ec6ef9beeb8c89af2fbd6fed2f4773d37b68ebf34b031f7916a5006"
+  },
+  "missing_mocap_events.json": {
+    "expects_exception": null,
+    "fixture_id": "41c9bb06cb44dddd19314ff87753463cf284eaac293073ba3941ceddee2a90a0",
+    "output_hash": "0aa45842c7f51d7840367cd1816545c748b6088d2a9da54c5a55accad5a0ea75"
+  },
+  "noisy_01.json": {
+    "expects_exception": null,
+    "fixture_id": "9e23cbaf7b65c0bdb08b4e65986849c855889011469ec2f8f06c87e0f2cd2a69",
+    "output_hash": "d6b142c63f9cca364a6e41e0aab1b0aa14d0d801cba0e3d282e249c4040755a8"
+  },
+  "noisy_02.json": {
+    "expects_exception": null,
+    "fixture_id": "7962c867f267b877ec4b8b56e62d7feb9050bd3fe8a04f132c4403bb9225a504",
+    "output_hash": "8ea08d45bd9999638e03af0223dccca73ec0248a310b9f646e269ac72230584e"
+  },
+  "noisy_03.json": {
+    "expects_exception": null,
+    "fixture_id": "b877711862e709124a272e1e9fcc082ccbfb70794594a6754d78f8c0512526c3",
+    "output_hash": "951c4f4021844ce9292afc7ef813ba780c6d97fb74ef5d1b53ce19ceaf5996ba"
+  },
+  "unit_mismatch_bw.json": {
+    "expects_exception": null,
+    "fixture_id": "8232ab7c816f77e57001a25b4b94e6e053bbc1213a80412d4b2211f7e0035852",
+    "output_hash": "54d9dbcc394ff9c6292f37be120f8c193e30a80fe2f3360aead777dc660bb5f8"
+  },
+  "unit_mismatch_n.json": {
+    "expects_exception": null,
+    "fixture_id": "66909a4eb174b29c3c9cc21a2a86ab0e49a73e42154fe0d98d6912a5fa22206b",
+    "output_hash": "988efb7ff26c53f37286f19c454c1397925a146d8413f8da1fc07baa14b7adae"
+  }
+}

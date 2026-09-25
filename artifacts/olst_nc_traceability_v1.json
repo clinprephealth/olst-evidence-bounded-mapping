@@ -1,0 +1,179 @@
+{
+  "invariant_targets": {
+    "evaluated_traceability_pct": 100.0,
+    "non_evaluable_reason_pct": 100.0
+  },
+  "rows": [
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "adversarial_conflicting_events.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "adversarial_stale_metadata.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "axis_flip_01.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "axis_flip_02.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "borderline_just_over.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "borderline_just_under.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "clean_older_01.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "clean_older_02_20s.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "clean_older_03.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "clean_young_01.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "clean_young_02.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 1,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 1,
+      "fixture": "missing_fp_channel.json",
+      "non_evaluable_count": 5,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 5
+    },
+    {
+      "evaluated_count": 0,
+      "evaluated_traceability_pct": null,
+      "evaluated_with_evidence_pointer": 0,
+      "fixture": "missing_mocap_events.json",
+      "non_evaluable_count": 6,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 6
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "noisy_01.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "noisy_02.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "noisy_03.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "unit_mismatch_bw.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    },
+    {
+      "evaluated_count": 2,
+      "evaluated_traceability_pct": 100.0,
+      "evaluated_with_evidence_pointer": 2,
+      "fixture": "unit_mismatch_n.json",
+      "non_evaluable_count": 4,
+      "non_evaluable_reason_pct": 100.0,
+      "non_evaluable_with_reason": 4
+    }
+  ],
+  "spec_version": "v1",
+  "totals": {
+    "evaluated_traceability_pct": 100.0,
+    "non_evaluable_reason_pct": 100.0,
+    "total_evaluated_lines": 33,
+    "total_evaluated_with_evidence_pointer": 33,
+    "total_non_evaluable_lines": 75,
+    "total_non_evaluable_with_reason": 75
+  }
+}

@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+arxiv/*.aux
+arxiv/*.log
+arxiv/*.out
+arxiv/*.bbl
+arxiv/*.blg
+arxiv/_olst_body.md

@@ -1,0 +1,98 @@
+{
+  "adversarial_conflicting_events.json": {
+    "expects_exception": null,
+    "fixture_id": "472af02f2975fca2c645329bf1a756923d07b25acd3b3f948bd4e8aad60bff94",
+    "output_hash": "db6612a462b8c2e073faa3d536b0922782f2044ffcc8b39d22095a21ea81e0b5"
+  },
+  "adversarial_stale_metadata.json": {
+    "expects_exception": null,
+    "fixture_id": "b2f5bbe123434df3f7c9f3f74b9b0e685b37d42c7eebbeb5c63647dca3735316",
+    "output_hash": "112dcbc21bbb46bc6038a64f9fe8b5402d512ed0f144e8b4061eaa9b6bfa487d"
+  },
+  "axis_flip_01.json": {
+    "expects_exception": null,
+    "fixture_id": "c89e6492854fbe4f266fc3ca06ffcb23eeaa5675b9f23ff328481518bf4f3f0a",
+    "output_hash": "b31b3d946ee6273df9b4f14df2c6f87d228e43f763bf42c931c446953e340172"
+  },
+  "axis_flip_02.json": {
+    "expects_exception": null,
+    "fixture_id": "52e84609ac0fd0f58f47edd2cd27cf21841fd2601f6baada9c918469e44dbeb3",
+    "output_hash": "abdd8b5cae181a8878076f7a1a8f9bd3acd4fce18498f862ac7dce356adf3d37"
+  },
+  "borderline_just_over.json": {
+    "expects_exception": null,
+    "fixture_id": "b206ba830892e7009506b117e497e0ed91b0e5905e40419b11c5bf99a04ce2ea",
+    "output_hash": "84b31b00e4605c0ff9fb1dcb92c2d5be6ba1152e5fbc949ca039396b09ee7ced"
+  },
+  "borderline_just_under.json": {
+    "expects_exception": null,
+    "fixture_id": "43fb7c107374580d499b6a653337cc7f3e50708d4eb4c9e073b6d768992c7e29",
+    "output_hash": "89dc77ab85e58c397a88101124856b65dd8676177cab8a9262dc48a1caeb21cf"
+  },
+  "clean_older_01.json": {
+    "expects_exception": null,
+    "fixture_id": "1a6f5e7a805963c5058b608b1fe2a4c372ce5a86348917c4d7237b2001deaad0",
+    "output_hash": "6823ca014447a17d893e523ef401384d5cc977766a8e9f2a7c4dcdcf8432a1c8"
+  },
+  "clean_older_02_20s.json": {
+    "expects_exception": null,
+    "fixture_id": "f998c665658fce3cfcb26957b925c9c7ebbf283d3f4e4c373ab5a29b25d22fd3",
+    "output_hash": "10b9bdb17c813b691d6658a64fd5d50943c2c9363b243807aa47f7b090d47947"
+  },
+  "clean_older_03.json": {
+    "expects_exception": null,
+    "fixture_id": "bee3bf5b77a2b2526529b8ef6b1d53580e0613fa82bdff67f6ab1eca033cfade",
+    "output_hash": "baec0f50699a8255451c4710a08fcb8c921d5f6b64169d57e5b4edbb2e1d2352"
+  },
+  "clean_young_01.json": {
+    "expects_exception": null,
+    "fixture_id": "a74d6032750ad537242b8574fd89fc0a5e34d427b16c1c67933cea30a264174a",
+    "output_hash": "4f4605abcf98798e1448f8ebde2f9a7e3f3d986cbceb3549adbeed1113c4d7b8"
+  },
+  "clean_young_02.json": {
+    "expects_exception": null,
+    "fixture_id": "c8b6aadaad3785288bf3ed0b158f679c9c9e4e0873608d9dc70aeebe9c49d086",
+    "output_hash": "5cad1234792cf24391a464f28fe33184771a40ac48bc4ae24c480eb1add481e6"
+  },
+  "excluded_capture_negative_control.json": {
+    "expects_exception": "ExcludedCaptureError",
+    "fixture_id": null,
+    "note": "Capture '12_MNTRL_V2' is excluded from canonical processing: Data collection error \u2014 capture missing per PhysioNet usage notes.",
+    "output_hash": null
+  },
+  "missing_fp_channel.json": {
+    "expects_exception": null,
+    "fixture_id": "0709f88ed3a6b4a87413de310eef23ad0215c1aa5f50073c85368a69d7fad388",
+    "output_hash": "edc9061a62ff69e02c82ad6a88200167d853b3ef5e3ec2d4bcdc0db2c5793bbd"
+  },
+  "missing_mocap_events.json": {
+    "expects_exception": null,
+    "fixture_id": "41c9bb06cb44dddd19314ff87753463cf284eaac293073ba3941ceddee2a90a0",
+    "output_hash": "2652d9e65606d44e9622a8160395bf3486f1e9dafce375dcb5d849e43ebaefba"
+  },
+  "noisy_01.json": {
+    "expects_exception": null,
+    "fixture_id": "9e23cbaf7b65c0bdb08b4e65986849c855889011469ec2f8f06c87e0f2cd2a69",
+    "output_hash": "93fa9378c0a25e5722398267858a58b128787d2c122fab98b158935f6a3fe714"
+  },
+  "noisy_02.json": {
+    "expects_exception": null,
+    "fixture_id": "7962c867f267b877ec4b8b56e62d7feb9050bd3fe8a04f132c4403bb9225a504",
+    "output_hash": "9c74d6ca1c8cf48989334accc7915cd43a52cada2ac12747ca6761406c2fd93e"
+  },
+  "noisy_03.json": {
+    "expects_exception": null,
+    "fixture_id": "b877711862e709124a272e1e9fcc082ccbfb70794594a6754d78f8c0512526c3",
+    "output_hash": "2ea9769a3853606c48368d70052f7d9d4a364ff4a5e3cb747cf1f1d6ccc208aa"
+  },
+  "unit_mismatch_bw.json": {
+    "expects_exception": null,
+    "fixture_id": "8232ab7c816f77e57001a25b4b94e6e053bbc1213a80412d4b2211f7e0035852",
+    "output_hash": "fde13913ef7449e436845fa465cf4d1c6993fd942f64838bc29ffd191c9ca55e"
+  },
+  "unit_mismatch_n.json": {
+    "expects_exception": null,
+    "fixture_id": "66909a4eb174b29c3c9cc21a2a86ab0e49a73e42154fe0d98d6912a5fa22206b",
+    "output_hash": "3409a7d38293cdfee5f772637fbe78ad71da757f0d8813970ee6fd2c0107679e"
+  }
+}
