@@ -1,2 +1,5 @@
-Code and scripts: Apache License 2.0 (see LICENSE-APACHE).
-Manuscript, figures, and frozen result files: CC BY 4.0 (see LICENSE-CC-BY).
+Code and tests: Apache License 2.0 (see LICENSE-APACHE).
+
+Manuscript and original figures: Creative Commons Attribution 4.0 International (see LICENSE-CC-BY).
+
+Dataset-derived fixtures, store snapshot, and result files: Creative Commons Attribution 4.0 International, with attribution to the PhysioNet One-Legged Stand Test dataset (Copeland et al.; DOI 10.13026/46hn-6b25; Sci Data 2026, doi 10.1038/s41597-026-06831-1). The upstream PhysioNet files are themselves CC BY 4.0 and are not redistributed here.

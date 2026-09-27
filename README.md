@@ -15,10 +15,16 @@ python -m pytest -q
 
 Nothing here predicts falls or is intended for clinical use. The PhysioNet
 waveforms are not redistributed. The frozen pre-submission plan in
-`protocol/` retains a few historical lines that name internal projects;
-those lines are preregistration metadata, not part of the public artifact.
+`protocol/` retains a few historical lines that name internal projects
+and a local filesystem path. Those lines are kept on purpose: they are
+the preregistration record, and sanitizing them after the fact would
+make that record less authentic. They are not kernel code, and they are
+not the public scientific claim.
 
 ## Licence
 
-- Code, fixtures (derived quantities + source digests), and tests: Apache 2.0
-- Manuscript and figures: CC BY 4.0
+- Code and tests: Apache-2.0
+- Manuscript and original figures: CC BY 4.0
+- Dataset-derived fixtures, store snapshot, and result files: CC BY 4.0,
+  with attribution to the PhysioNet OLST dataset (Copeland et al.;
+  DOI 10.13026/46hn-6b25)

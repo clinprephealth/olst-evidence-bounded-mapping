@@ -13,15 +13,17 @@
 #   bash experiments/olst_nc_replay/release/make_public_release.sh <output_dir>
 #
 # Afterwards, from <output_dir>:
-#   python -m pytest -q            # 164 tests; no PhysioNet data required
+#   python -m pytest -q            # 165 tests; no PhysioNet data required
 #
 # Excluded on purpose (internal platform material or superseded documents):
 #   experiments/olst_nc_replay/substrate_adapter.py
 #   experiments/olst_nc_replay/paper/appendix_substrate.md
 #   experiments/olst_nc_replay/paper/paper.md          (May 2026 draft, superseded)
 #   tests/test_olst_substrate_adapter.py
-# A LICENSE file is NOT generated: the licence is an author decision (see the
-# release checklist); the script warns if it is absent from the output.
+# Licensing is decided: Apache-2.0 on code/tests; CC BY 4.0 on the manuscript,
+# original figures, and dataset-derived fixtures/results (with PhysioNet OLST
+# attribution). The public-package assembler writes those files; this script
+# still warns if LICENSE is absent so a bare extraction is not silently unlicensed.
 
 set -euo pipefail
 
@@ -95,7 +97,7 @@ if [ -n "$hits" ]; then
   echo "NOTE: platform-specific tokens found in (review before deposit):" >&2
   echo "$hits" >&2
 fi
-[ -f "$OUT/LICENSE" ] || echo "NOTE: no LICENSE in $OUT (author decision pending)." >&2
+[ -f "$OUT/LICENSE" ] || echo "NOTE: no LICENSE in $OUT (expected Apache-2.0 / CC BY 4.0 files in the public package)." >&2
 
 # 6. manifest
 ( cd "$OUT" && find . -type f ! -name MANIFEST.sha256 | LC_ALL=C sort | xargs shasum -a 256 > MANIFEST.sha256 )

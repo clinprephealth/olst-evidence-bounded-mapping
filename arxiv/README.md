@@ -7,9 +7,11 @@
 **Primary category.** cs.SE
 **Cross-lists.** q-bio.QM, cs.CY
 
-**License on arXiv.** Creative Commons Attribution (CC BY 4.0)
+**License on arXiv.** Submitter's choice. Recommended: Creative Commons Attribution (CC BY 4.0). arXiv also offers CC BY-SA, CC BY-NC-SA, CC BY-NC-ND, CC0, and its own perpetual non-exclusive license; the selected license is irrevocable.
 
-**Comments line.** Methods artifact on the public PhysioNet OLST corpus. Nothing here predicts falls or is intended for clinical use. Code and store snapshot: [GitHub URL]. Archival DOI: [Zenodo, after first release].
+**Citations (fixed 2026-09-26).** `arxiv/main.tex` uses `\citep{...}` (Morse 1989 is `\citep{morse1989}`). Compiled from `arxiv-source/` the PDF has a References section beginning with Morse, Morse & Tylko 1989. No leftover Markdown `[key]` citation keys remain.
+
+**Comments line.** 20 pages, 4 figures. Methods artifact on the public PhysioNet OLST corpus. Nothing here predicts falls or is intended for clinical use. Code and store snapshot: [GitHub URL]. Archival DOI: [Zenodo, after v0.1.1].
 
 **Abstract.** Paste the abstract from the executed manuscript (first paragraph after `## Abstract`). Plain text for the metadata form.
 
